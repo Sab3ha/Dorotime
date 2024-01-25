@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line
 export default Timer;  
 const Timer = ({ time, isBreak }) => {
     return (
@@ -7,7 +8,7 @@ const Timer = ({ time, isBreak }) => {
         </div>
     )}
   
-    if (Timer=="0:00"){
+    if (Timer==="0:00"){
        var snd = new Audio('/alarm.mp3');
        snd.play();
 }
