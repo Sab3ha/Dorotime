@@ -43,7 +43,23 @@ const App = () => {
           <Controls startTimer={startTimer} resetTimer={resetTimer} isActive={isActive} />
         </div>
       </div>
+      <div className="sm-diamond-top timer">
+        <div className="timer-text">
+         <p className='diamond-text'>Pomodoro</p>
+        </div>
+      </div>
+      <div className="sm-diamond-bottom timer">
+        <div className="timer-text">
+         <p className='diamond-text'>Short Break</p>
+        </div>
+      </div>
+      <div className="sm-diamond-right timer">
+        <div className="timer-text">
+         <p className='diamond-text'>Long Break</p>
+        </div>
+      </div>
     </div>
+
   );
 };
 

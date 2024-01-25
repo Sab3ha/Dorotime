@@ -7,13 +7,18 @@ body {
 }
 
 .diamond.timer {
+  position: relative;
   text-align: center;
   background-color: #fff;
-  padding: 100px;
+  padding: 50px;
   margin-left: 100px;
   border-radius: 1px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transform: rotate(45deg);
+  display: inline;
+  left: 15%;
+  bottom: 5%;
+ 
 
 }
 
@@ -28,6 +33,54 @@ body {
 
 }
 
+.sm-diamond-top.timer {
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+  padding: 30px 0px 40px 0px;
+  margin-left: 25px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: rotate(45deg);
+  display: inline;
+  left: 40%;
+  bottom: 50%;
+}
+.sm-diamond-bottom.timer {
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+  padding: 50px 0px 30px 0px;
+  margin-left: 10px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: rotate(45deg);
+  display: inline;
+  left: 40%;
+  bottom: 30%;
+}
+.sm-diamond-right.timer {
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+  padding: 50px 0px 30px 0px;
+  margin-left: 10px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: rotate(45deg);
+  display: inline;
+  left: 70%;
+  bottom: 70%;
+}
+.diamond-text{
+  font-size: 30px;
+  color: #000;
+  text-align: center;
+  padding-top: 10px;
+
+}
+
+
 .container {
   display:flex;
   flex-direction: column;
@@ -38,20 +91,19 @@ body {
 
 p {
   color: #666;
-  margin-right:59px;
+  margin-right:45px;
   font-size: 50px;
   transform: rotate(-45deg);
-  padding-bottom: 25px;
+  /* padding-bottom: 25px; */
 }
 
-button {
+.diamond button{
 
   background: none;
   color: #000;
   border: none;
-  padding: 10px 10px;
+  padding: 10px 10px 0px 0px;
   margin-left:136px;
-  padding-bottom: 5px;
   font-size: 40px;
   cursor: pointer;
   border-radius: 4px;
@@ -64,3 +116,21 @@ button:hover {
   background-color: #000;
   color: #fff;
 }
+
+.sm-diamond button {
+  
+  background: none;
+  color: #000;
+  border: none;
+  padding: 5px 5px 0px 5px;
+  margin-right: 10px;
+  margin-left:120px;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  transform: rotate(-45deg);
+  
+}
+
+
