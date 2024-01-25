@@ -1,5 +1,5 @@
 import React from 'react';
-export default Timer;  
+
 const Timer = ({ time, isBreak }) => {
     return (
         <div>
@@ -11,3 +11,5 @@ const Timer = ({ time, isBreak }) => {
        var snd = new Audio('/alarm.mp3');
        snd.play();
 }
+
+export default Timer;
