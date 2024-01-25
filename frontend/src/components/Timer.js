@@ -1,6 +1,6 @@
 import React from 'react';
-// eslint-disable-next-line
-export default Timer;  
+
+
 const Timer = ({ time, isBreak }) => {
     return (
         <div>
@@ -12,3 +12,5 @@ const Timer = ({ time, isBreak }) => {
        var snd = new Audio('/alarm.mp3');
        snd.play();
 }
+
+export default Timer;
