@@ -2,135 +2,114 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #000;
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-
+  margin: 0;
 }
-
-.diamond.timer {
-  position: relative;
-  text-align: center;
-  background-color: #fff;
-  padding: 50px;
-  margin-left: 100px;
-  border-radius: 1px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transform: rotate(45deg);
-  display: inline;
-  left: 15%;
-  bottom: 5%;
- 
-
-}
-
-.dorotime {
-  text-align: left;
-  color: #fff;
-  font-size: 80px;
-  font-weight: normal;
-  padding-top: 30px;
-  padding-bottom: 75px;
-  padding-right: 150px;
-
-}
-
-.sm-diamond-top.timer {
-  position: relative;
-  text-align: center;
-  background-color: #fff;
-  padding: 30px 0px 40px 0px;
-  margin-left: 25px;
-  border-radius: 1px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transform: rotate(45deg);
-  display: inline;
-  left: 40%;
-  bottom: 50%;
-}
-.sm-diamond-bottom.timer {
-  position: relative;
-  text-align: center;
-  background-color: #fff;
-  padding: 50px 0px 30px 0px;
-  margin-left: 10px;
-  border-radius: 1px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transform: rotate(45deg);
-  display: inline;
-  left: 40%;
-  bottom: 30%;
-}
-.sm-diamond-right.timer {
-  position: relative;
-  text-align: center;
-  background-color: #fff;
-  padding: 50px 0px 30px 0px;
-  margin-left: 10px;
-  border-radius: 1px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transform: rotate(45deg);
-  display: inline;
-  left: 70%;
-  bottom: 70%;
-}
-.diamond-text{
-  font-size: 30px;
-  color: #000;
-  text-align: center;
-  padding-top: 10px;
-
-}
-
 
 .container {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-end;
   width: 700px;
   height: 900px;
 }
 
-p {
-  color: #666;
-  margin-right:45px;
-  font-size: 50px;
-  transform: rotate(-45deg);
-  /* padding-bottom: 25px; */
+
+.dorotime {
+  text-align: center;
+  color: #fff;
+  font-size: 80px;
+  font-weight: normal;
+  position: relative;
+  right:65%;
+  top:5%;
+}
+.small-square-with-diamond {
+  width: 100px;
+  height: 100px;
+  background: none;
+  position: relative;
+  transform: scale(1.5);
 }
 
-.diamond button{
+.small-square-with-diamond.bottom{
+  left:1%
+}
 
-  background: none;
-  color: #000;
+.small-square-with-diamond.right{
+  left:20%;
+  bottom: 30%;
+}
+
+.small-square-with-diamond.top{
+  left:1%;
+  bottom: 60%;
+}
+
+.square-with-diamond {
+  width: 250px;
+  height: 250px;
+  background-color: #000000;
+  position: relative;
+  right:25%;
+  transform: scale(1.2);
+}
+
+.diamond-inside {
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg);
+}
+.timer-text.small{
+  text-align: center;
+  font-size: 20px;
   border: none;
-  padding: 10px 10px 0px 0px;
-  margin-left:136px;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.timer-text {
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+  box-sizing: border-box;
+}
+
+.timer-text p {
+  color: black;
   font-size: 40px;
+  margin-top: 80px;
+  margin-bottom: 45px;
+}
+
+.timer-text button {
+  color: black;
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 32px;
+  border: none;
   cursor: pointer;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
-  transform: rotate(-45deg);
+  margin-top: auto;
 }
+
 
 button:hover {
 
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #818080;
 }
 
-.sm-diamond button {
-  
-  background: none;
-  color: #000;
-  border: none;
-  padding: 5px 5px 0px 5px;
-  margin-right: 10px;
-  margin-left:120px;
-  font-size: 25px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  transform: rotate(-45deg);
-  
-}
+
 
 

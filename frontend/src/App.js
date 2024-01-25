@@ -35,30 +35,37 @@ const App = () => {
   };
 
   return (
-    <div className="container">
-      <h1 className='dorotime'>DOROTIME</h1>
-      <div className="diamond timer">
-        <div className="timer-text">
-          <Timer time={time} isBreak={isBreak} />
-          <Controls startTimer={startTimer} resetTimer={resetTimer} isActive={isActive} />
-        </div>
+      <div className="container">
+          <h1 className='dorotime'>DOROTIME</h1>
+          
+          <div className="square-with-diamond">
+              <div className="diamond-inside">
+                  <div className="timer-text">
+                      <Timer time={time} isBreak={isBreak}/>
+                      <Controls startTimer={startTimer} resetTimer={resetTimer} isActive={isActive}/>
+                  </div>
+              </div>
+          </div>
+
+          <div className="small-square-with-diamond bottom">
+              <div className="diamond-inside bottom">
+                  <button className="timer-text small">Long Break</button>
+              </div>
+          </div>
+
+          <div className="small-square-with-diamond right">
+              <div className="diamond-inside right">
+                  <button className="timer-text small">Short Break</button>
+              </div>
+          </div>
+
+          <div className="small-square-with-diamond top">
+              <div className="diamond-inside top">
+                  <button className="timer-text small">Pomodoro</button>
+              </div>
+          </div>
+
       </div>
-      <div className="sm-diamond-top timer">
-        <div className="timer-text">
-         <p className='diamond-text'>Pomodoro</p>
-        </div>
-      </div>
-      <div className="sm-diamond-bottom timer">
-        <div className="timer-text">
-         <p className='diamond-text'>Short Break</p>
-        </div>
-      </div>
-      <div className="sm-diamond-right timer">
-        <div className="timer-text">
-         <p className='diamond-text'>Long Break</p>
-        </div>
-      </div>
-    </div>
 
   );
 };
