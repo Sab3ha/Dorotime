@@ -4,36 +4,49 @@ import Controls from './components/Controls.js';
 import './App.css'
 
 const App = () => {
-  const [time, setTime] = useState(1500); // Initial time in seconds (25 minutes)
-  const [isBreak, setIsBreak] = useState(false);
-  const [isActive, setIsActive] = useState(false);
+    const [time, setTime] = useState(1500);
+    const [isBreak, setIsBreak] = useState(false);
+    const [isActive, setIsActive] = useState(false);
+    const [mode, setMode] = useState('pomodoro');
 
-  useEffect(() => {
-    let interval;
+    useEffect(() => {
+        let interval;
 
-    if (isActive && time > 0) {
-      interval = setInterval(() => {
-        setTime((prevTime) => prevTime - 1);
-      }, 1000);
-    } else if (isActive && time === 0) {
-      // Handle switch between Pomodoro and Break
-      setIsBreak((prevIsBreak) => !prevIsBreak);
-      setTime(isBreak ? 300 : 600); // 5 minutes for break, 10 minutes for long break
-    }
+        if (isActive && time > 0) {
+            interval = setInterval(() => {
+                setTime((prevTime) => prevTime - 1);
+            }, 1000);
+        } else if (isActive && time === 0) {
+            setIsBreak((prevIsBreak) => {
+                setTime(getNextTime(!prevIsBreak));
+                return !prevIsBreak;
+            });
+        }
 
-    return () => clearInterval(interval);
-  }, [isActive, time, isBreak]);
+        return () => clearInterval(interval);
+    }, [isActive, time]);
 
-  const startTimer = () => {
-    setIsActive(true);
-  };
+    const startTimer = () => {
+        setIsActive(true);
+    };
 
-  const resetTimer = () => {
-    setIsActive(false);
-    setIsBreak(false);
-    setTime(1500);
-  };
+    const resetTimer = () => {
+        setIsActive(false);
+        setIsBreak(false);
+        setTime(getNextTime(mode));
+    };
 
+    const switchMode = (newMode) => {
+        setIsActive(false);
+        setMode(newMode);
+        setIsBreak(newMode === 'short' || newMode === 'long');
+        setTime(getNextTime(newMode));
+        startTimer();
+    };
+
+    const getNextTime = (newMode) => {
+        return newMode === 'short' ? 300 : (newMode === 'long' ? 600 : 1500);
+    };
   return (
       <div className="container">
           <h1 className='dorotime'>Dorotime</h1>
@@ -49,19 +62,19 @@ const App = () => {
 
           <div className="small-square-with-diamond bottom">
               <div className="diamond-inside bottom">
-                  <button className="timer-text small">Long Break</button>
+                  <button className="timer-text small" onClick={() => switchMode('long')}>Long Break</button>
               </div>
           </div>
 
           <div className="small-square-with-diamond right">
               <div className="diamond-inside right">
-                  <button className="timer-text small">Short Break</button>
+                  <button className="timer-text small" onClick={() => switchMode('short')}>Short Break</button>
               </div>
           </div>
 
           <div className="small-square-with-diamond top">
               <div className="diamond-inside top">
-                  <button className="timer-text small">Pomodoro</button>
+                  <button className="timer-text small" onClick={() => switchMode('pomodoro')}>Pomodoro</button>
               </div>
           </div>
 
