@@ -36,7 +36,7 @@ const App = () => {
 
   return (
       <div className="container">
-          <h1 className='dorotime'>DOROTIME</h1>
+          <h1 className='dorotime'>Dorotime</h1>
           
           <div className="square-with-diamond">
               <div className="diamond-inside">
