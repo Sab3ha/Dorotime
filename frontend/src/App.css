@@ -71,7 +71,7 @@ body {
   position: relative;
   height: 50px;
   width: 50px;
-  top: 20%;
+  top: 2%;
 }
 img {
   height: 20px;
@@ -100,15 +100,14 @@ img {
 
 .timer-text p {
   color: black;
-  font-size: 40px;
-  margin-top: 80px;
+  font-size: 60px;
+  margin-top: 60px;
   margin-bottom: 45px;
 }
 
 .timer-text button {
   color: black;
   background-color: white;
-  
   font-size: 30px;
   border: none;
   cursor: pointer;
