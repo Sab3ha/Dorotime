@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/dorotime/static/css/main.fa790379.css",
+    "main.js": "/dorotime/static/js/main.143eb7d5.js",
+    "static/media/Calm River.mp3": "/dorotime/static/media/Calm River.5dd23057f344c026a34f.mp3",
+    "static/media/Calm Ocean Waves With Little Bird Song Sound Effect.mp3": "/dorotime/static/media/Calm Ocean Waves With Little Bird Song Sound Effect.fc4dd5e7fe85103f256e.mp3",
+    "static/media/Ocean Waves.mp3": "/dorotime/static/media/Ocean Waves.250ac02084e5536836bb.mp3",
+    "static/media/Peacful Water Stream In Forest.mp3": "/dorotime/static/media/Peacful Water Stream In Forest.2ec384c9fe1d444eaae9.mp3",
+    "static/media/Rain.mp3": "/dorotime/static/media/Rain.114faf2aa400caee154b.mp3",
+    "static/media/Wind In Tall Grass.mp3": "/dorotime/static/media/Wind In Tall Grass.7a8916ca31e01949447c.mp3",
+    "static/media/Cricket Chirping.mp3": "/dorotime/static/media/Cricket Chirping.9c8ae2be2b267d7f419f.mp3",
+    "static/media/Alarm.mp3": "/dorotime/static/media/Alarm.5b344bbe0173a4f04709.mp3",
+    "index.html": "/dorotime/index.html",
+    "main.fa790379.css.map": "/dorotime/static/css/main.fa790379.css.map",
+    "main.143eb7d5.js.map": "/dorotime/static/js/main.143eb7d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa790379.css",
+    "static/js/main.143eb7d5.js"
+  ]
+}
